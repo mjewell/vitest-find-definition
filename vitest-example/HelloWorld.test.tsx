@@ -22,9 +22,9 @@ import { screen } from "@testing-library/react";
 
     test("with @testing-library/react", async () => {
       render(<HelloWorld />);
-      await expect
-        .element(screen.getByRole(role, { name: "hello" }))
-        .toHaveTextContent("world");
+      expect(screen.getByRole(role, { name: "hello" })).toHaveTextContent(
+        "world"
+      );
     });
   });
 });
